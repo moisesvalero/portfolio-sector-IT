@@ -98,9 +98,6 @@ export default function Home() {
             <a className="nav-link" href="#experience">
               Experiencia
             </a>
-            <a className="nav-link" href="#projects">
-              Proyectos
-            </a>
             <a className="nav-link" href="#education">
               Formacion
             </a>
