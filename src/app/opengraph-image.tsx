@@ -14,8 +14,8 @@ export default function Image() {
     <div
       style={{
         alignItems: "center",
-        background: "#f7f7f4",
-        color: "#171717",
+        background: "#000000",
+        color: "#ffffff",
         display: "flex",
         fontFamily: "Arial, Helvetica, sans-serif",
         height: "100%",
@@ -27,35 +27,34 @@ export default function Image() {
       <div style={{ display: "flex", flexDirection: "column", gap: "28px" }}>
         <div
           style={{
-            color: "#0b7a55",
+            color: "#a1a1aa",
             fontSize: "28px",
             fontWeight: 700,
-            letterSpacing: "0.18em",
             textTransform: "uppercase",
           }}
         >
-          Plantilla Next.js
+          Soporte IT / Helpdesk
         </div>
         <div
           style={{
             fontSize: "86px",
             fontWeight: 800,
-            letterSpacing: "-0.02em",
             lineHeight: 0.95,
             maxWidth: "900px",
           }}
         >
-          Webs con agentes desde el minuto uno.
+          Moises Valero Sanchez
         </div>
         <div
           style={{
-            color: "#4b4b45",
+            color: "#a1a1aa",
             fontSize: "34px",
             lineHeight: 1.3,
             maxWidth: "820px",
           }}
         >
-          SEO, shadcn, Supabase, Sanity, tests y CI preparados.
+          Tecnico IT Nivel 1 con foco en usuarios, Microsoft 365, Windows y
+          documentacion de incidencias.
         </div>
       </div>
     </div>,

@@ -77,12 +77,29 @@ export function createWebsiteJsonLd() {
   };
 }
 
-export function createOrganizationJsonLd() {
+export function createPersonJsonLd() {
   return {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    name: siteConfig.name,
+    "@type": "Person",
+    name: "Moises Valero Sanchez",
+    jobTitle: "Tecnico IT Nivel 1 / Helpdesk",
     url: siteConfig.url,
+    email: "info@moisesvalero.es",
+    telephone: "+34627950559",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Alcoy",
+      addressRegion: "Alicante",
+      addressCountry: "ES",
+    },
+    knowsAbout: [
+      "Soporte IT",
+      "Helpdesk",
+      "Windows 10/11",
+      "Microsoft 365",
+      "Soporte remoto",
+      "Gestion de tickets",
+    ],
   };
 }
 
