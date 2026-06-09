@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 
 import { JsonLd } from "@/components/seo/json-ld";
+import { ThemeToggle } from "@/components/theme-toggle";
 import { createPersonJsonLd, createWebsiteJsonLd } from "@/lib/seo";
 
 const tools = [
@@ -84,13 +85,16 @@ const education = [
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-black text-white">
+    <main className="min-h-screen bg-[var(--background)] text-[var(--foreground)] transition-colors duration-300">
       <JsonLd data={createWebsiteJsonLd()} />
       <JsonLd data={createPersonJsonLd()} />
 
-      <header className="fixed inset-x-0 top-0 z-50 border-b border-[#333333] bg-black/80 backdrop-blur-md">
+      <header className="fixed inset-x-0 top-0 z-50 border-b border-[var(--border)] bg-[var(--header-bg)] backdrop-blur-md">
         <nav className="mx-auto flex h-16 max-w-[1200px] items-center justify-between px-4 md:px-6">
-          <a className="text-[18px] leading-7 font-bold text-white" href="#">
+          <a
+            className="text-[18px] leading-7 font-bold text-[var(--foreground)]"
+            href="#"
+          >
             MVS
           </a>
 
@@ -106,20 +110,23 @@ export default function Home() {
             </a>
           </div>
 
-          <a
-            className="rounded-lg bg-white px-4 py-2 text-[14px] leading-5 font-bold text-black transition-opacity hover:opacity-90"
-            href="/moises-valero-cv-soporte-it.pdf"
-            download
-          >
-            Descargar CV
-          </a>
+          <div className="flex items-center gap-3">
+            <ThemeToggle />
+            <a
+              className="rounded-lg bg-[var(--primary)] px-4 py-2 text-[14px] leading-5 font-bold text-[var(--primary-foreground)] transition-opacity hover:opacity-90"
+              href="/moises-valero-cv-soporte-it.pdf"
+              download
+            >
+              Descargar CV
+            </a>
+          </div>
         </nav>
       </header>
 
       <div className="mx-auto w-full max-w-[1200px] px-4 pt-32 pb-24 md:px-0">
         <section className="mb-24 grid grid-cols-1 items-center gap-6 md:grid-cols-12">
           <div className="flex justify-center md:col-span-3 md:justify-start">
-            <div className="relative size-48 overflow-hidden rounded-full border-2 border-[#333333] bg-[#111111] md:size-64">
+            <div className="relative size-48 overflow-hidden rounded-full border-2 border-[var(--border)] bg-[var(--card)] shadow-[var(--portrait-shadow)] md:size-64">
               <Image
                 src="/moises-valero-profile.png"
                 alt="Moisés Valero Sánchez"
@@ -132,13 +139,13 @@ export default function Home() {
           </div>
 
           <div className="text-center md:col-span-9 md:text-left">
-            <h1 className="mb-4 text-[24px] leading-8 font-bold text-white md:text-[52px] md:leading-[60px] xl:text-[64px] xl:leading-[72px]">
+            <h1 className="mb-4 text-[24px] leading-8 font-bold text-[var(--foreground)] md:text-[52px] md:leading-[60px] xl:text-[64px] xl:leading-[72px]">
               Moisés Valero Sánchez
             </h1>
-            <p className="mx-auto mb-4 max-w-2xl text-[20px] leading-7 font-semibold text-[#A1A1AA] md:mx-0 md:text-[24px] md:leading-8">
+            <p className="mx-auto mb-4 max-w-2xl text-[20px] leading-7 font-semibold text-[var(--muted-foreground)] md:mx-0 md:text-[24px] md:leading-8">
               Técnico de soporte IT N1 para usuarios y equipos Windows
             </p>
-            <p className="mx-auto flex max-w-full items-start justify-center gap-2 text-[16px] leading-6 text-[#888888] md:mx-0 md:justify-start">
+            <p className="mx-auto flex max-w-full items-start justify-center gap-2 text-[16px] leading-6 text-[var(--subtle-foreground)] md:mx-0 md:justify-start">
               <MapPin className="mt-1 size-4 shrink-0" aria-hidden="true" />
               <span className="min-w-0">
                 Alcoy, Alicante · Disponible presencial, híbrido o remoto
@@ -148,10 +155,10 @@ export default function Home() {
         </section>
 
         <section className="mb-12 max-w-3xl">
-          <h2 className="mb-6 text-[14px] leading-5 font-medium text-[#888888] uppercase">
+          <h2 className="mb-6 text-[14px] leading-5 font-medium text-[var(--subtle-foreground)] uppercase">
             Sobre mí
           </h2>
-          <p className="text-[18px] leading-7 text-[#e2e2e2]">
+          <p className="text-[18px] leading-7 text-[var(--body-copy)]">
             Ayudo a usuarios y equipos de trabajo a recuperar su ritmo cuando
             algo falla: equipos Windows, Microsoft 365, redes básicas,
             periféricos, soporte remoto y documentación de incidencias. También
@@ -163,8 +170,8 @@ export default function Home() {
         </section>
 
         <section className="mb-24">
-          <div className="rounded-xl border border-l-4 border-[#333333] border-l-white bg-[#111111] p-12 transition-colors hover:border-white">
-            <p className="text-[20px] leading-7 font-semibold text-white italic md:text-[24px] md:leading-8">
+          <div className="rounded-xl border border-l-4 border-[var(--border)] border-l-[var(--quote-border)] bg-[var(--card)] p-12 shadow-[var(--card-shadow)] transition-colors hover:border-[var(--quote-border)]">
+            <p className="text-[20px] leading-7 font-semibold text-[var(--foreground)] italic md:text-[24px] md:leading-8">
               &quot;Mi experiencia en desarrollo web me da una base técnica
               fuerte para entender sistemas, documentar soluciones y aprender
               herramientas IT con rapidez.&quot;
@@ -178,10 +185,10 @@ export default function Home() {
         >
           <div className="portfolio-card flex flex-col justify-between p-6 md:col-span-4">
             <div>
-              <h3 className="mb-6 text-[24px] leading-8 font-semibold text-white">
+              <h3 className="mb-6 text-[24px] leading-8 font-semibold text-[var(--foreground)]">
                 Qué aporto
               </h3>
-              <ul className="flex flex-col gap-4 text-[16px] leading-6 text-[#A1A1AA]">
+              <ul className="flex flex-col gap-4 text-[16px] leading-6 text-[var(--muted-foreground)]">
                 {offers.map((offer) => (
                   <li key={offer} className="dash-item">
                     {offer}
@@ -189,29 +196,32 @@ export default function Home() {
                 ))}
               </ul>
             </div>
-            <div className="mt-8 border-t border-[#333333] pt-6">
-              <ShieldCheck className="size-10 text-white" aria-hidden="true" />
+            <div className="mt-8 border-t border-[var(--border)] pt-6">
+              <ShieldCheck
+                className="size-10 text-[var(--foreground)]"
+                aria-hidden="true"
+              />
             </div>
           </div>
 
           <div className="space-y-4 md:col-span-8">
-            <h3 className="mb-6 text-[24px] leading-8 font-semibold text-white">
+            <h3 className="mb-6 text-[24px] leading-8 font-semibold text-[var(--foreground)]">
               Experiencia profesional
             </h3>
             {experiences.map((item) => (
               <article key={item.role} className="portfolio-card p-4">
                 <div className="mb-2 flex items-start justify-between gap-4">
-                  <h4 className="text-[18px] leading-7 font-bold text-white">
+                  <h4 className="text-[18px] leading-7 font-bold text-[var(--foreground)]">
                     {item.role}
                   </h4>
-                  <span className="shrink-0 font-mono text-[13px] leading-[18px] text-[#888888]">
+                  <span className="shrink-0 font-mono text-[13px] leading-[18px] text-[var(--subtle-foreground)]">
                     {item.period}
                   </span>
                 </div>
-                <p className="mb-1 text-[16px] leading-6 text-white">
+                <p className="mb-1 text-[16px] leading-6 text-[var(--foreground)]">
                   {item.company}
                 </p>
-                <p className="text-[14px] leading-5 text-[#888888]">
+                <p className="text-[14px] leading-5 text-[var(--subtle-foreground)]">
                   {item.description}
                 </p>
               </article>
@@ -219,7 +229,7 @@ export default function Home() {
           </div>
 
           <div className="md:col-span-12" id="projects">
-            <h3 className="mb-6 text-[24px] leading-8 font-semibold text-white">
+            <h3 className="mb-6 text-[24px] leading-8 font-semibold text-[var(--foreground)]">
               Herramientas e infraestructura
             </h3>
             <div className="flex flex-wrap gap-3">
@@ -232,7 +242,7 @@ export default function Home() {
           </div>
 
           <div className="mt-12 md:col-span-12" id="education">
-            <h3 className="mb-6 text-[24px] leading-8 font-semibold text-white">
+            <h3 className="mb-6 text-[24px] leading-8 font-semibold text-[var(--foreground)]">
               Formación y certificaciones
             </h3>
             <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
@@ -242,13 +252,13 @@ export default function Home() {
                 return (
                   <article key={item.title} className="portfolio-card p-4">
                     <Icon
-                      className="mb-3 size-5 text-[#888888]"
+                      className="mb-3 size-5 text-[var(--subtle-foreground)]"
                       aria-hidden="true"
                     />
-                    <h4 className="mb-1 text-[14px] leading-5 font-bold text-white">
+                    <h4 className="mb-1 text-[14px] leading-5 font-bold text-[var(--foreground)]">
                       {item.title}
                     </h4>
-                    <p className="font-mono text-[13px] leading-[18px] text-[#888888]">
+                    <p className="font-mono text-[13px] leading-[18px] text-[var(--subtle-foreground)]">
                       {item.subtitle}
                     </p>
                   </article>
@@ -262,12 +272,12 @@ export default function Home() {
           className="flex flex-col items-center text-center"
           id="contact"
         >
-          <h2 className="mb-8 text-[24px] leading-8 font-semibold text-white md:text-[32px] md:leading-10">
+          <h2 className="mb-8 text-[24px] leading-8 font-semibold text-[var(--foreground)] md:text-[32px] md:leading-10">
             ¿Buscas un técnico IT resolutivo para tu equipo?
           </h2>
           <div className="flex w-full flex-col gap-4 sm:w-auto sm:flex-row">
             <a
-              className="rounded-lg bg-white px-10 py-4 text-[14px] leading-5 font-bold text-black transition-opacity hover:opacity-90"
+              className="rounded-lg bg-[var(--primary)] px-10 py-4 text-[14px] leading-5 font-bold text-[var(--primary-foreground)] transition-opacity hover:opacity-90"
               href="/moises-valero-cv-soporte-it.pdf"
               download
             >
@@ -290,11 +300,11 @@ export default function Home() {
         </section>
       </div>
 
-      <footer className="mx-auto flex w-full max-w-[1200px] flex-col items-center justify-between gap-4 border-t border-[#333333] px-4 py-12 md:flex-row md:px-6">
-        <p className="text-[14px] leading-5 font-medium text-[#888888]">
+      <footer className="mx-auto flex w-full max-w-[1200px] flex-col items-center justify-between gap-4 border-t border-[var(--border)] px-4 py-12 md:flex-row md:px-6">
+        <p className="text-[14px] leading-5 font-medium text-[var(--subtle-foreground)]">
           Desarrollado por{" "}
           <a
-            className="text-white transition-opacity hover:opacity-80"
+            className="text-[var(--foreground)] transition-opacity hover:opacity-80"
             href="https://moisesvalero.es"
             target="_blank"
             rel="noreferrer"

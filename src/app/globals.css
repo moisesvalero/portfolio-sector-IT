@@ -16,6 +16,50 @@
   --border: #333333;
   --input: #333333;
   --ring: #ffffff;
+  --body-copy: #e2e2e2;
+  --subtle-foreground: #888888;
+  --header-bg: rgb(0 0 0 / 80%);
+  --quote-border: #ffffff;
+  --card-shadow: none;
+  --portrait-shadow: none;
+  --selection-bg: #ffffff;
+  --selection-fg: #000000;
+  --scrollbar-track: #000000;
+  --scrollbar-thumb: #333333;
+  --toggle-bg: #111111;
+  --toggle-active-bg: #ffffff;
+  --toggle-active-fg: #000000;
+}
+
+[data-theme="light"] {
+  --background: #f6f0e8;
+  --foreground: #251f1a;
+  --card: #fffaf2;
+  --card-foreground: #251f1a;
+  --primary: #2d2620;
+  --primary-foreground: #fffaf2;
+  --secondary: #eadfd2;
+  --secondary-foreground: #2d2620;
+  --accent: #e9d8c8;
+  --accent-foreground: #2d2620;
+  --muted: #eee4d8;
+  --muted-foreground: #6f6257;
+  --border: #decfbe;
+  --input: #d8c8b8;
+  --ring: #8c6f5a;
+  --body-copy: #433a32;
+  --subtle-foreground: #7d6f64;
+  --header-bg: rgb(246 240 232 / 82%);
+  --quote-border: #a47758;
+  --card-shadow: 0 18px 60px rgb(91 66 43 / 10%);
+  --portrait-shadow: 0 24px 70px rgb(91 66 43 / 16%);
+  --selection-bg: #2d2620;
+  --selection-fg: #fffaf2;
+  --scrollbar-track: #f6f0e8;
+  --scrollbar-thumb: #c7b5a4;
+  --toggle-bg: #eee4d8;
+  --toggle-active-bg: #2d2620;
+  --toggle-active-fg: #fffaf2;
 }
 
 @theme inline {
@@ -46,8 +90,8 @@ body {
 }
 
 ::selection {
-  background: #ffffff;
-  color: #000000;
+  background: var(--selection-bg);
+  color: var(--selection-fg);
 }
 
 ::-webkit-scrollbar {
@@ -55,27 +99,31 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #000000;
+  background: var(--scrollbar-track);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #333333;
+  background: var(--scrollbar-thumb);
   border-radius: 2px;
 }
 
 .portfolio-card {
-  border: 1px solid #333333;
+  border: 1px solid var(--border);
   border-radius: 0.75rem;
-  background: #111111;
-  transition: border-color 0.2s ease;
+  background: var(--card);
+  box-shadow: var(--card-shadow);
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .portfolio-card:hover {
-  border-color: #ffffff;
+  border-color: var(--quote-border);
 }
 
 .nav-link {
-  color: #888888;
+  color: var(--subtle-foreground);
   font-size: 14px;
   font-weight: 500;
   line-height: 20px;
@@ -84,7 +132,7 @@ body {
 }
 
 .nav-link:hover {
-  color: #ffffff;
+  color: var(--foreground);
 }
 
 .dash-item {
@@ -94,17 +142,17 @@ body {
 }
 
 .dash-item::before {
-  color: #888888;
+  color: var(--subtle-foreground);
   content: "-";
   font-weight: 700;
 }
 
 .skill-chip {
-  border: 1px solid #333333;
+  border: 1px solid var(--border);
   border-radius: 9999px;
-  background: #111111;
+  background: var(--card);
   padding: 8px 16px;
-  color: #a1a1aa;
+  color: var(--muted-foreground);
   font-size: 14px;
   font-weight: 500;
   line-height: 20px;
@@ -114,8 +162,8 @@ body {
 }
 
 .skill-chip:hover {
-  border-color: #ffffff;
-  color: #ffffff;
+  border-color: var(--quote-border);
+  color: var(--foreground);
 }
 
 .contact-button {
@@ -123,11 +171,11 @@ body {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  border: 1px solid #333333;
+  border: 1px solid var(--border);
   border-radius: 0.5rem;
-  background: #000000;
+  background: var(--background);
   padding: 16px 32px;
-  color: #ffffff;
+  color: var(--foreground);
   font-size: 14px;
   font-weight: 500;
   line-height: 20px;
@@ -136,5 +184,39 @@ body {
 }
 
 .contact-button:hover {
-  border-color: #ffffff;
+  border-color: var(--quote-border);
+}
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  border: 1px solid var(--border);
+  border-radius: 9999px;
+  background: var(--toggle-bg);
+  padding: 3px;
+}
+
+.theme-toggle-button {
+  display: inline-flex;
+  width: 30px;
+  height: 30px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 9999px;
+  color: var(--subtle-foreground);
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.theme-toggle-button:hover {
+  color: var(--foreground);
+}
+
+.theme-toggle-button[data-active="true"] {
+  background: var(--toggle-active-bg);
+  color: var(--toggle-active-fg);
+  transform: translateY(-1px);
 }
