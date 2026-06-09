@@ -15,15 +15,17 @@ describe("seo helpers", () => {
     });
 
     expect(metadata.alternates?.canonical).toBe(
-      "https://moisesvalero.es/contacto",
+      "https://soporte.moisesvalero.es/contacto",
     );
-    expect(metadata.openGraph?.url).toBe("https://moisesvalero.es/contacto");
+    expect(metadata.openGraph?.url).toBe(
+      "https://soporte.moisesvalero.es/contacto",
+    );
   });
 
   it("creates website json-ld for the public portfolio", () => {
     expect(createWebsiteJsonLd()).toMatchObject({
       "@type": "WebSite",
-      url: "https://moisesvalero.es",
+      url: "https://soporte.moisesvalero.es",
       inLanguage: "es",
     });
   });
