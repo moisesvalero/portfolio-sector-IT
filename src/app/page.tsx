@@ -127,7 +127,7 @@ export default function Home() {
                 fill
                 priority
                 sizes="(min-width: 768px) 256px, 192px"
-                className="object-cover contrast-[1.02] grayscale saturate-[1.08] transition-all duration-500 hover:scale-105 hover:grayscale-0"
+                className="object-cover contrast-[1.02] saturate-[1.08] transition-all duration-500 hover:scale-105 hover:saturate-[1.18]"
               />
             </div>
           </div>
