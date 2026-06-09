@@ -43,7 +43,7 @@ export default function Image() {
             maxWidth: "900px",
           }}
         >
-          Moises Valero Sanchez
+          Moisés Valero Sánchez
         </div>
         <div
           style={{
@@ -53,8 +53,8 @@ export default function Image() {
             maxWidth: "820px",
           }}
         >
-          Tecnico IT Nivel 1 con foco en usuarios, Microsoft 365, Windows y
-          documentacion de incidencias.
+          Técnico IT nivel 1 con foco en usuarios, Microsoft 365, Windows y
+          documentación de incidencias.
         </div>
       </div>
     </div>,

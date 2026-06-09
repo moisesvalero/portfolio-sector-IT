@@ -1,36 +1,36 @@
-# Moises Valero Sanchez - Portfolio Soporte IT
+# Moisés Valero Sánchez - Portfolio Soporte IT
 
-Micro landing profesional orientada a reclutadores para presentar mi perfil de **Tecnico IT Nivel 1 / Helpdesk / Soporte a usuarios**.
+Micro landing profesional orientada a reclutadores para presentar mi perfil de **Técnico IT nivel 1 / Helpdesk / Soporte a usuarios**.
 
 ![Captura del portfolio](docs/images/portfolio-screenshot.png)
 
 ## Perfil
 
-Soy Moises Valero Sanchez, tecnico IT con enfoque practico en soporte a usuarios, resolucion de incidencias y preparacion de equipos. Trabajo con entornos Windows 10/11, Microsoft 365, Outlook, impresoras, redes basicas, soporte remoto y documentacion de tickets.
+Soy Moisés Valero Sánchez, técnico IT con enfoque práctico en soporte a usuarios, resolución de incidencias y preparación de equipos. Trabajo con entornos Windows 10/11, Microsoft 365, Outlook, impresoras, redes básicas, soporte remoto y documentación de tickets.
 
-Busco oportunidades en soporte IT, helpdesk o service desk, especialmente en entornos donde se valore la comunicacion clara con usuarios, la autonomia y la capacidad de aprender herramientas internas con rapidez.
+Busco oportunidades en soporte IT, helpdesk o service desk, especialmente en entornos donde se valore la comunicación clara con usuarios, la autonomía y la capacidad de aprender herramientas internas con rapidez.
 
 ## Contenido del portfolio
 
-- Resumen profesional enfocado a soporte IT Nivel 1.
-- Experiencia relevante en soporte informatico, mantenimiento IT y control digital.
-- Stack de herramientas: Windows, Microsoft 365, Outlook, Teams, AnyDesk, TeamViewer, GLPI/Jira, Freshdesk y Active Directory basico.
-- Formacion y certificaciones relacionadas con soporte, desarrollo web, IA aplicada y analitica.
+- Resumen profesional enfocado a soporte IT nivel 1.
+- Experiencia relevante en soporte informático, mantenimiento IT y control digital.
+- Stack de herramientas: Windows, Microsoft 365, Outlook, Teams, AnyDesk, TeamViewer, GLPI/Jira, Freshdesk y Active Directory básico.
+- Formación y certificaciones relacionadas con soporte, desarrollo web, IA aplicada y analítica.
 - CV descargable en PDF desde la propia landing.
 
 ## Seguridad y privacidad
 
 Este repositorio no incluye secretos, claves privadas ni variables de entorno reales.
 
-Antes de hacerlo publico se reviso:
+Antes de hacerlo público se revisó:
 
 - Ausencia de archivos `.env.local`, claves `.pem/.key` o credenciales privadas trackeadas.
-- Busqueda de patrones sensibles como tokens, passwords, claves API, IBAN y DNI/NIF.
-- PDF publico del CV revisado para evitar DNI/NIF, IBAN, numeros largos o direccion completa.
+- Búsqueda de patrones sensibles como tokens, passwords, claves API, IBAN y DNI/NIF.
+- PDF público del CV revisado para evitar DNI/NIF, IBAN, números largos o dirección completa.
 
 Los datos personales publicados quedan limitados al contenido profesional necesario del portfolio y del CV.
 
-## Stack tecnico
+## Stack técnico
 
 - Next.js 16
 - React 19
@@ -56,7 +56,7 @@ La web queda disponible por defecto en:
 http://localhost:3000
 ```
 
-## Validacion
+## Validación
 
 ```bash
 pnpm lint

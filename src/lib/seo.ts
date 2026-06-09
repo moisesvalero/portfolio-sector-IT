@@ -94,7 +94,7 @@ export function createPersonJsonLd() {
       "Microsoft 365",
       "Soporte remoto",
       "Gestión de tickets",
-      "Montaje PC",
+      "Montaje de PC",
     ],
   };
 }

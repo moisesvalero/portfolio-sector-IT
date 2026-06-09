@@ -34,7 +34,7 @@ test("portfolio renders without horizontal overflow", async ({ page }) => {
   const metrics = await page.evaluate(() => {
     const main = document.querySelector("main");
     const profileImage = document.querySelector(
-      'img[alt="Moises Valero Sanchez"]',
+      'img[alt="Moisés Valero Sánchez"]',
     );
     const profileFrame = profileImage?.parentElement;
     const imageRect = profileImage?.getBoundingClientRect();

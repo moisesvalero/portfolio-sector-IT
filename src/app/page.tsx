@@ -22,7 +22,7 @@ const tools = [
   "TeamViewer",
   "GLPI / Jira",
   "Freshdesk",
-  "Montaje PC",
+  "Montaje de PC",
   "Active Directory (básico)",
 ];
 
@@ -30,7 +30,7 @@ const offers = [
   "Resolución de incidencias con trato cercano",
   "Preparación de equipos listos para trabajar",
   "Configuración de periféricos, correo y herramientas",
-  "Montaje y puesta a punto de PCs nuevos",
+  "Montaje y puesta a punto de equipos nuevos",
   "Soporte remoto y presencial en entornos Windows",
   "Registro claro de tickets y soluciones aplicadas",
 ];
@@ -99,7 +99,7 @@ export default function Home() {
               Experiencia
             </a>
             <a className="nav-link" href="#education">
-              Formacion
+              Formación
             </a>
             <a className="nav-link" href="#contact">
               Contacto
@@ -122,7 +122,7 @@ export default function Home() {
             <div className="relative size-48 overflow-hidden rounded-full border-2 border-[#333333] bg-[#111111] md:size-64">
               <Image
                 src="/moises-valero-profile.png"
-                alt="Moises Valero Sanchez"
+                alt="Moisés Valero Sánchez"
                 fill
                 priority
                 sizes="(min-width: 768px) 256px, 192px"
@@ -155,7 +155,7 @@ export default function Home() {
             Ayudo a usuarios y equipos de trabajo a recuperar su ritmo cuando
             algo falla: equipos Windows, Microsoft 365, redes básicas,
             periféricos, soporte remoto y documentación de incidencias. También
-            monto y pongo a punto PCs nuevos, desde equipos de trabajo hasta
+            monto y pongo a punto equipos nuevos, desde equipos de trabajo hasta
             configuraciones a medida. Combino trato cercano con base técnica en
             desarrollo web y automatización para entender el problema,
             resolverlo y dejarlo bien explicado.
