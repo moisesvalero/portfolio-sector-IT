@@ -43,5 +43,8 @@ next-env.d.ts
 
 .vercel
 
-# Local agent skills
-.agents/skills/impeccable/
+# Local agent artifacts
+.agents/
+skills-lock.json
+stitch_vercel_dark_portfolio_cv/
+test-results/

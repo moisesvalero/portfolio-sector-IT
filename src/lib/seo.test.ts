@@ -15,15 +15,16 @@ describe("seo helpers", () => {
     });
 
     expect(metadata.alternates?.canonical).toBe(
-      "http://localhost:3000/contacto",
+      "https://moisesvalero.es/contacto",
     );
-    expect(metadata.openGraph?.url).toBe("http://localhost:3000/contacto");
+    expect(metadata.openGraph?.url).toBe("https://moisesvalero.es/contacto");
   });
 
-  it("creates website json-ld with search action", () => {
-    expect(createWebsiteJsonLd().potentialAction).toMatchObject({
-      "@type": "SearchAction",
-      target: "http://localhost:3000/search?q={search_term_string}",
+  it("creates website json-ld for the public portfolio", () => {
+    expect(createWebsiteJsonLd()).toMatchObject({
+      "@type": "WebSite",
+      url: "https://moisesvalero.es",
+      inLanguage: "es",
     });
   });
 

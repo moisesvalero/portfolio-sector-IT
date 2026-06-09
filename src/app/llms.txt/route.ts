@@ -12,18 +12,16 @@ ${siteConfig.description}
 - TypeScript
 - Tailwind CSS
 - shadcn-style components
-- Supabase optional integration
-- Sanity optional integration
 
 ## Useful paths
 
-- /: template homepage
+- /: portfolio homepage
 - /sitemap.xml: sitemap
 - /robots.txt: crawler policy
 
 ## Repository
 
-https://github.com/moisesvalero/next-agent-template
+https://github.com/moisesvalero/portfolio-sector-IT
 `;
 
   return new Response(body, {

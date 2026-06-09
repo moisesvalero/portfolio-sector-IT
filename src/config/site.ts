@@ -1,19 +1,20 @@
 export const siteConfig = {
-  name: "Moises Valero Sanchez | Soporte IT",
+  name: "Moisés Valero Sánchez | Técnico IT Nivel 1",
   shortName: "MVS IT",
   description:
-    "Portfolio profesional de Moises Valero Sanchez, tecnico IT Nivel 1, Helpdesk y soporte a usuarios.",
-  url: process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000",
+    "Portfolio profesional de Moisés Valero Sánchez, técnico IT Nivel 1 especializado en soporte a usuarios, Helpdesk, Windows 10/11 y Microsoft 365.",
+  url: process.env.NEXT_PUBLIC_APP_URL ?? "https://moisesvalero.es",
   locale: "es_ES",
   creator: "moisesvalero",
   keywords: [
-    "Moises Valero Sanchez",
+    "Moisés Valero Sánchez",
     "Soporte IT",
     "Helpdesk",
-    "Tecnico IT Nivel 1",
+    "Técnico IT Nivel 1",
     "Windows 10",
     "Windows 11",
     "Microsoft 365",
+    "Montaje PC",
     "Alcoy",
   ],
 };

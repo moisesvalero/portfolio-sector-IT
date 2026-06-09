@@ -69,11 +69,6 @@ export function createWebsiteJsonLd() {
     url: siteConfig.url,
     description: siteConfig.description,
     inLanguage: "es",
-    potentialAction: {
-      "@type": "SearchAction",
-      target: `${siteConfig.url}/search?q={search_term_string}`,
-      "query-input": "required name=search_term_string",
-    },
   };
 }
 
@@ -81,8 +76,8 @@ export function createPersonJsonLd() {
   return {
     "@context": "https://schema.org",
     "@type": "Person",
-    name: "Moises Valero Sanchez",
-    jobTitle: "Tecnico IT Nivel 1 / Helpdesk",
+    name: "Moisés Valero Sánchez",
+    jobTitle: "Técnico de soporte IT N1 / Helpdesk",
     url: siteConfig.url,
     email: "info@moisesvalero.es",
     telephone: "+34627950559",
@@ -98,7 +93,8 @@ export function createPersonJsonLd() {
       "Windows 10/11",
       "Microsoft 365",
       "Soporte remoto",
-      "Gestion de tickets",
+      "Gestión de tickets",
+      "Montaje PC",
     ],
   };
 }

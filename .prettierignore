@@ -20,3 +20,9 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
+
+# local agent artifacts
+.agents
+skills-lock.json
+stitch_vercel_dark_portfolio_cv
+test-results
