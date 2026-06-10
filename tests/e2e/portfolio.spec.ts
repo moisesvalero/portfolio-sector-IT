@@ -90,3 +90,21 @@ test("theme follows system preference and can be changed", async ({ page }) => {
 
   await expect(page.locator("html")).toHaveAttribute("data-theme", "dark");
 });
+
+test("metadata images are available", async ({ page, request }) => {
+  await page.goto("/");
+
+  const iconHref = await page
+    .locator('link[rel="icon"]')
+    .first()
+    .getAttribute("href");
+  expect(iconHref).toMatch(/\/icon\.svg/);
+
+  const iconResponse = await request.get("/icon.svg");
+  expect(iconResponse.ok()).toBe(true);
+  expect(iconResponse.headers()["content-type"]).toContain("image/svg+xml");
+
+  const ogResponse = await request.get("/opengraph-image");
+  expect(ogResponse.ok()).toBe(true);
+  expect(ogResponse.headers()["content-type"]).toContain("image/png");
+});
