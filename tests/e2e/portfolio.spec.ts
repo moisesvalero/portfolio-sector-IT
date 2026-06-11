@@ -7,6 +7,10 @@ test("portfolio renders without horizontal overflow", async ({ page }) => {
   await expect(
     page.getByRole("heading", { name: /Moisés Valero Sánchez/i }),
   ).toBeVisible();
+  await expect(page.getByRole("link", { name: "MVS" })).toHaveAttribute(
+    "href",
+    "/",
+  );
   await expect(
     page.getByRole("link", { name: "Descargar CV" }).first(),
   ).toHaveAttribute("href", "/moises-valero-cv-soporte-it.pdf");
@@ -50,6 +54,7 @@ test("portfolio renders without horizontal overflow", async ({ page }) => {
       imageObjectFit: profileImage
         ? getComputedStyle(profileImage).objectFit
         : "",
+      imageSrcset: profileImage?.getAttribute("srcset") ?? "",
       imageWidth: imageRect?.width ?? 0,
       imageHeight: imageRect?.height ?? 0,
       frameWidth: frameRect?.width ?? 0,
@@ -62,6 +67,7 @@ test("portfolio renders without horizontal overflow", async ({ page }) => {
   expect(metrics.theme).toBe("dark");
   expect(metrics.mainBackground).toBe("rgb(0, 0, 0)");
   expect(metrics.imageObjectFit).toBe("cover");
+  expect(metrics.imageSrcset).not.toContain("w=3840");
   expect(metrics.frameWidth).toBeGreaterThanOrEqual(180);
   expect(metrics.frameWidth).toBeLessThanOrEqual(260);
   expect(metrics.frameHeight).toBeGreaterThanOrEqual(180);

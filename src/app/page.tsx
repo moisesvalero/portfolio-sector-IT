@@ -93,7 +93,7 @@ export default function Home() {
         <nav className="mx-auto flex h-16 max-w-[1200px] items-center justify-between px-4 md:px-6">
           <a
             className="text-[18px] leading-7 font-bold text-[var(--foreground)]"
-            href="#"
+            href="/"
           >
             MVS
           </a>
@@ -130,10 +130,10 @@ export default function Home() {
               <Image
                 src="/moises-valero-profile.png"
                 alt="Moisés Valero Sánchez"
-                fill
+                width={256}
+                height={256}
                 priority
-                sizes="(min-width: 768px) 256px, 192px"
-                className="object-cover contrast-[1.02] saturate-[1.08] transition-all duration-500 hover:scale-105 hover:saturate-[1.18]"
+                className="size-full object-cover contrast-[1.02] saturate-[1.08] transition-all duration-500 hover:scale-105 hover:saturate-[1.18]"
               />
             </div>
           </div>

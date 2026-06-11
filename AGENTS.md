@@ -12,6 +12,9 @@ Guía operativa para agentes que trabajen en esta plantilla Next.js.
 ## Flujo recomendado para agentes
 
 - Este proyecto usa pnpm. No uses npm ni generes `package-lock.json` salvo petición explícita.
+- No crees ramas nuevas salvo petición explícita del usuario.
+- No crees Pull Requests salvo petición explícita del usuario.
+- Trabaja directamente en `main` y, cuando el usuario pida subir cambios, haz commit y push directo a `origin/main`.
 - Ejecuta `pnpm dlx autoskills` al iniciar un proyecto clonado desde esta plantilla para instalar o actualizar skills útiles para el stack.
 - Para trabajo visual, puedes instalar Impeccable con `pnpm run agent:impeccable` y después usarlo para auditar, pulir o documentar la interfaz.
 - Windframe MCP es opcional y depende de la cuenta del usuario. No lo instales como dependencia del proyecto: configúralo en el agente MCP del usuario cuando necesites estilos/tokens de Windframe.
