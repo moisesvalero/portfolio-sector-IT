@@ -172,9 +172,7 @@ export default function Home() {
         <section className="mb-24">
           <div className="rounded-xl border border-l-4 border-[var(--border)] border-l-[var(--quote-border)] bg-[var(--card)] p-12 shadow-[var(--card-shadow)] transition-colors hover:border-[var(--quote-border)]">
             <p className="text-[20px] leading-7 font-semibold text-[var(--foreground)] italic md:text-[24px] md:leading-8">
-              &quot;Mi experiencia en desarrollo web me da una base técnica
-              fuerte para entender sistemas, documentar soluciones y aprender
-              herramientas IT con rapidez.&quot;
+              &quot;Mi base es el desarrollo web. Eso significa que entiendo cómo funciona el sistema por dentro, no solo cómo se usa por fuera.&quot;
             </p>
           </div>
         </section>
