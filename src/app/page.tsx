@@ -80,7 +80,8 @@ const education = [
   },
   {
     icon: Code2,
-    title: "Certificado de Profesionalidad Nivel 3 - DAW",
+    title:
+      "Certificado de Profesionalidad de Nivel 3 (Desarrollo de Aplicaciones con Tecnologías Web)",
     subtitle: "Ministerio de Educación y Formación Profesional",
   },
   {
