@@ -2,12 +2,11 @@ import Image from "next/image";
 import {
   Code2,
   GraduationCap,
-  LayoutDashboard,
   Mail,
   MapPin,
+  Network,
   Phone,
   ShieldCheck,
-  Sparkles,
 } from "lucide-react";
 
 import { JsonLd } from "@/components/seo/json-ld";
@@ -63,8 +62,8 @@ const experiences = [
 const education = [
   {
     icon: GraduationCap,
-    title: "Certificado de Soporte IBM",
-    subtitle: "IBM SkillsBuild",
+    title: "Google IT Support Professional Certificate",
+    subtitle: "Google / Coursera",
   },
   {
     icon: Code2,
@@ -72,14 +71,14 @@ const education = [
     subtitle: "Desarrollo de aplicaciones web",
   },
   {
-    icon: Sparkles,
-    title: "IA generativa para soporte",
-    subtitle: "Microsoft / LinkedIn",
+    icon: ShieldCheck,
+    title: "Introduction to Cybersecurity",
+    subtitle: "Cisco Networking Academy",
   },
   {
-    icon: LayoutDashboard,
-    title: "Google Analytics 4",
-    subtitle: "Google Academy",
+    icon: Network,
+    title: "Networking Basics",
+    subtitle: "Cisco Networking Academy",
   },
 ];
 
