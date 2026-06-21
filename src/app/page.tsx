@@ -16,23 +16,25 @@ import { createPersonJsonLd, createWebsiteJsonLd } from "@/lib/seo";
 const tools = [
   "Windows 10/11",
   "Microsoft 365",
+  "Office",
   "Outlook",
   "Teams",
   "AnyDesk",
   "TeamViewer",
+  "Escritorio remoto",
   "GLPI / Jira",
   "Freshdesk",
-  "Montaje de PC",
-  "Active Directory (básico)",
+  "Active Directory básico",
+  "Antivirus",
 ];
 
 const offers = [
-  "Resolución de incidencias con trato cercano",
-  "Preparación de equipos listos para trabajar",
-  "Configuración de periféricos, correo y herramientas",
-  "Montaje y puesta a punto de equipos nuevos",
-  "Soporte remoto y presencial en entornos Windows",
-  "Registro claro de tickets y soluciones aplicadas",
+  "Soporte a usuarios con trato cercano y eficiente",
+  "Instalación y configuración de software, drivers y sistemas",
+  "Resolución de incidencias de hardware, software y periféricos",
+  "Redes básicas: WiFi, direccionamiento IP, DNS y conectividad",
+  "Mantenimiento preventivo y diagnóstico de hardware de PC",
+  "Documentación, registro claro y cierre de tickets (GLPI/Jira)",
 ];
 
 const experiences = [
@@ -40,35 +42,46 @@ const experiences = [
     role: "Técnico IT / Soporte informático",
     period: "2024 - Actualidad",
     company: "Autónomo y proyectos propios",
-    description:
-      "Soporte técnico para usuarios, organizaciones y equipos de trabajo que necesitan resolver incidencias sin fricción.",
+    description: [
+      "Resolver incidencias de software y hardware en entornos Windows, correo y periféricos.",
+      "Preparar equipos mediante la instalación de Windows, drivers, software y configuración de perfiles de usuario.",
+      "Realizar mantenimiento preventivo y correctivo de PCs, incluyendo limpieza, optimización y revisión de componentes.",
+      "Proporcionar soporte remoto utilizando herramientas como AnyDesk, TeamViewer y escritorio remoto.",
+    ],
+  },
+  {
+    role: "Operario de línea (control digital)",
+    period: "2015 - 2019",
+    company: "Replus",
+    description: [
+      "Gestionar el software interno de stock para el seguimiento preciso de pedidos y producción.",
+      "Registrar la entrada y salida de material mediante el uso de escáneres y terminales informáticas.",
+      "Resolver incidencias de usuario detectadas en la interfaz digital de la maquinaria.",
+    ],
   },
   {
     role: "Mantenimiento IT y soporte web",
     period: "2012 - 2014",
     company: "MutuaSAD",
-    description:
-      "Mantenimiento preventivo y correctivo de sistemas, soporte web y mejora de procesos digitales internos.",
-  },
-  {
-    role: "Operario de línea - control digital",
-    period: "2015 - 2019",
-    company: "Replus",
-    description:
-      "Control de maquinaria CNC y gestión de procesos digitales en un entorno industrial con foco en precisión y continuidad.",
+    description: [
+      "Ejecutar el mantenimiento informático y brindar apoyo técnico directo a los usuarios.",
+      "Instalar y configurar periféricos como impresoras y escáneres.",
+      "Gestionar redes básicas incluyendo routers, WiFi, configuración de IPs, DNS y conectividad.",
+      "Administrar dominios, hosting y servicios de correo corporativo.",
+    ],
   },
 ];
 
 const education = [
   {
     icon: GraduationCap,
-    title: "Google IT Support Professional Certificate",
+    title: "Certificado Profesional de Asistencia Informática",
     subtitle: "Google / Coursera",
   },
   {
     icon: Code2,
-    title: "Certificado IFCD0210",
-    subtitle: "Desarrollo de aplicaciones web",
+    title: "Certificado de Profesionalidad Nivel 3 - DAW",
+    subtitle: "Ministerio de Educación y Formación Profesional",
   },
   {
     icon: ShieldCheck,
@@ -142,7 +155,7 @@ export default function Home() {
               Moisés Valero Sánchez
             </h1>
             <p className="mx-auto mb-4 max-w-2xl text-[20px] leading-7 font-semibold text-[var(--muted-foreground)] md:mx-0 md:text-[24px] md:leading-8">
-              Técnico de soporte IT N1 para usuarios y equipos Windows
+              Técnico IT Nivel 1 | Helpdesk | Soporte a usuarios
             </p>
             <p className="mx-auto flex max-w-full items-start justify-center gap-2 text-[16px] leading-6 text-[var(--subtle-foreground)] md:mx-0 md:justify-start">
               <MapPin className="mt-1 size-4 shrink-0" aria-hidden="true" />
@@ -217,12 +230,14 @@ export default function Home() {
                     {item.period}
                   </span>
                 </div>
-                <p className="mb-1 text-[16px] leading-6 text-[var(--foreground)]">
+                <p className="mb-2 text-[16px] leading-6 font-semibold text-[var(--foreground)]">
                   {item.company}
                 </p>
-                <p className="text-[14px] leading-5 text-[var(--subtle-foreground)]">
-                  {item.description}
-                </p>
+                <ul className="list-disc space-y-1.5 pl-4 text-[14px] leading-5 text-[var(--subtle-foreground)]">
+                  {item.description.map((bullet, idx) => (
+                    <li key={idx}>{bullet}</li>
+                  ))}
+                </ul>
               </article>
             ))}
           </div>
