@@ -75,13 +75,13 @@ const experiences = [
 const education = [
   {
     icon: GraduationCap,
-    title: "Certificado Profesional de Asistencia Informática",
+    title: "Google IT Support",
     subtitle: "Google / Coursera",
   },
   {
     icon: Code2,
     title:
-      "Certificado de Profesionalidad de Nivel 3 (Desarrollo de Aplicaciones con Tecnologías Web)",
+      "Certificado Profesional IFCD0210 Desarrollo de Aplicaciones con Tecnologías Web",
     subtitle: "Ministerio de Educación y Formación Profesional",
   },
   {
@@ -156,7 +156,7 @@ export default function Home() {
               Moisés Valero Sánchez
             </h1>
             <p className="mx-auto mb-4 max-w-2xl text-[20px] leading-7 font-semibold text-[var(--muted-foreground)] md:mx-0 md:text-[24px] md:leading-8">
-              Técnico IT Nivel 1 | Helpdesk | Soporte a usuarios
+              Técnico IT | Helpdesk | Soporte a usuarios
             </p>
             <p className="mx-auto flex max-w-full items-start justify-center gap-2 text-[16px] leading-6 text-[var(--subtle-foreground)] md:mx-0 md:justify-start">
               <MapPin className="mt-1 size-4 shrink-0" aria-hidden="true" />
