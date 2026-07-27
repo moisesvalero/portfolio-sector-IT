@@ -24,6 +24,9 @@
     "verify": "pnpm run lint && pnpm run knip && pnpm run check && pnpm run format:check && pnpm test && pnpm run test:e2e && pnpm run build",
     "prepare": "husky"
   },
+  "knip": {
+    "ignoreDependencies": ["lint-staged"]
+  },
   "lint-staged": {
     "*.{ts,tsx,js,jsx,svelte}": [
       "oxlint",
