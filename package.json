@@ -25,11 +25,16 @@
     "prepare": "husky"
   },
   "knip": {
-    "ignoreDependencies": ["lint-staged"]
+    "ignoreDependencies": [
+      "lint-staged"
+    ]
   },
   "lint-staged": {
     "*.{ts,tsx,js,jsx,svelte}": [
       "oxlint",
+      "prettier --write"
+    ],
+    "*.{json,md,css}": [
       "prettier --write"
     ]
   },
