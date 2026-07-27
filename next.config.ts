@@ -63,6 +63,12 @@ const securityHeaders = [
         },
       ]
     : []),
+  {
+    key: "Cache-Control",
+    value: isProduction
+      ? "public, max-age=0, must-revalidate"
+      : "no-cache, no-store, must-revalidate",
+  },
 ];
 
 const nextConfig: NextConfig = {
@@ -73,6 +79,16 @@ const nextConfig: NextConfig = {
       {
         source: "/(.*)",
         headers: securityHeaders,
+      },
+      {
+        source:
+          "/:path(.+\\.(?:png|jpg|jpeg|gif|webp|avif|svg|ico|woff2?|ttf|eot|js|css))",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
+          },
+        ],
       },
     ];
   },

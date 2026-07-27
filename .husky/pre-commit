@@ -1,4 +1,5 @@
 #!/bin/sh
-pnpm exec lint-staged
-pnpm run check
-pnpm test
+export PATH="$HOME/AppData/Roaming/npm:/c/Program Files/nodejs:$PATH"
+corepack pnpm exec lint-staged
+corepack pnpm run check
+corepack pnpm test

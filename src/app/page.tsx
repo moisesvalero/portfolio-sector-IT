@@ -11,7 +11,11 @@ import {
 
 import { JsonLd } from "@/components/seo/json-ld";
 import { ThemeToggle } from "@/components/theme-toggle";
-import { createPersonJsonLd, createWebsiteJsonLd } from "@/lib/seo";
+import {
+  createFaqJsonLd,
+  createPersonJsonLd,
+  createWebsiteJsonLd,
+} from "@/lib/seo";
 
 const tools = [
   "Windows 10/11",
@@ -96,11 +100,30 @@ const education = [
   },
 ];
 
+const faqItems = [
+  {
+    question: "¿Qué servicios de soporte IT ofreces?",
+    answer:
+      "Soporte a usuarios con Windows 10/11, Microsoft 365, Outlook, Teams, redes básicas, montaje de PC, diagnóstico de hardware, soporte remoto con AnyDesk/TeamViewer y documentación de incidencias.",
+  },
+  {
+    question: "¿Cuál es tu zona de cobertura?",
+    answer:
+      "Estoy basado en Alcoy, Alicante. Ofrezco servicio presencial en la zona, híbrido y remoto para toda España.",
+  },
+  {
+    question: "¿Tienes experiencia con herramientas de ticketing?",
+    answer:
+      "Sí, he trabajado con GLPI, Jira y Freshdesk para el registro, seguimiento y cierre de incidencias.",
+  },
+];
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-[var(--background)] text-[var(--foreground)] transition-colors duration-300">
       <JsonLd data={createWebsiteJsonLd()} />
       <JsonLd data={createPersonJsonLd()} />
+      <JsonLd data={createFaqJsonLd(faqItems)} />
 
       <header className="fixed inset-x-0 top-0 z-50 border-b border-[var(--border)] bg-[var(--header-bg)] backdrop-blur-md">
         <nav className="mx-auto flex h-16 max-w-[1200px] items-center justify-between px-4 md:px-6">
@@ -313,6 +336,27 @@ export default function Home() {
             </a>
           </div>
         </section>
+
+        <section className="mb-24 max-w-3xl" id="faq">
+          <h2 className="mb-6 text-[14px] leading-5 font-medium text-[var(--subtle-foreground)] uppercase">
+            Preguntas frecuentes
+          </h2>
+          <div className="space-y-2">
+            {faqItems.map((item) => (
+              <details
+                key={item.question}
+                className="portfolio-card group cursor-pointer p-4"
+              >
+                <summary className="text-[16px] leading-6 font-semibold text-[var(--foreground)]">
+                  {item.question}
+                </summary>
+                <p className="mt-2 text-[14px] leading-5 text-[var(--subtle-foreground)]">
+                  {item.answer}
+                </p>
+              </details>
+            ))}
+          </div>
+        </section>
       </div>
 
       <footer className="mx-auto flex w-full max-w-[1200px] flex-col items-center justify-between gap-4 border-t border-[var(--border)] px-4 py-12 md:flex-row md:px-6">
@@ -327,6 +371,17 @@ export default function Home() {
             Moisés Valero
           </a>
         </p>
+        <div className="flex items-center gap-6">
+          <a className="nav-link" href="/privacidad">
+            Privacidad
+          </a>
+          <a className="nav-link" href="/cookies">
+            Cookies
+          </a>
+          <a className="nav-link" href="/aviso-legal">
+            Aviso legal
+          </a>
+        </div>
         <div className="flex gap-6">
           <a
             className="nav-link"

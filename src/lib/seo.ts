@@ -69,6 +69,7 @@ export function createWebsiteJsonLd() {
     url: siteConfig.url,
     description: siteConfig.description,
     inLanguage: "es",
+    dateModified: new Date().toISOString().split("T")[0],
   };
 }
 
@@ -108,5 +109,22 @@ export function createSoftwareApplicationJsonLd() {
     applicationCategory: "DeveloperApplication",
     operatingSystem: "Web",
     url: siteConfig.url,
+  };
+}
+
+type FaqItem = { question: string; answer: string };
+
+export function createFaqJsonLd(items: FaqItem[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: items.map((item) => ({
+      "@type": "Question",
+      name: item.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.answer,
+      },
+    })),
   };
 }

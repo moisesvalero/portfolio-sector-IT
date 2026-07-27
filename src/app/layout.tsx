@@ -6,20 +6,7 @@ import { createPageMetadata } from "@/lib/seo";
 
 import "./globals.css";
 
-const themeScript = `
-(() => {
-  const savedTheme = localStorage.getItem("theme");
-  const systemTheme = window.matchMedia("(prefers-color-scheme: dark)").matches
-    ? "dark"
-    : "light";
-  const theme = savedTheme === "light" || savedTheme === "dark"
-    ? savedTheme
-    : systemTheme;
-
-  document.documentElement.dataset.theme = theme;
-  document.documentElement.style.colorScheme = theme;
-})();
-`;
+const themeScript = `(()=>{const t=localStorage.getItem("theme"),s=window.matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light",e=t==="light"||t==="dark"?t:s;document.documentElement.dataset.theme=e;document.documentElement.style.colorScheme=e;})();`;
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -38,6 +25,11 @@ export const metadata: Metadata = {
     template: `%s | ${siteConfig.name}`,
   },
   metadataBase: new URL(siteConfig.url),
+  alternates: {
+    languages: {
+      "es-ES": siteConfig.url,
+    },
+  },
 };
 
 export default function RootLayout({
