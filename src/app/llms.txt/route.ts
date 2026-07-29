@@ -15,7 +15,7 @@ ${siteConfig.description}
 
 ## Useful paths
 
-- /: portfolio homepage
+- /: portafolio homepage
 - /sitemap.xml: sitemap
 - /robots.txt: crawler policy
 

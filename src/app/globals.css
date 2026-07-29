@@ -107,7 +107,7 @@ body {
   border-radius: 2px;
 }
 
-.portfolio-card {
+.portafolio-card {
   border: 1px solid var(--border);
   border-radius: 0.75rem;
   background: var(--card);
@@ -118,7 +118,7 @@ body {
     box-shadow 0.2s ease;
 }
 
-.portfolio-card:hover {
+.portafolio-card:hover {
   border-color: var(--quote-border);
 }
 

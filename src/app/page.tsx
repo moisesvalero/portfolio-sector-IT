@@ -219,7 +219,7 @@ export default function Home() {
           className="mb-24 grid grid-cols-1 gap-8 md:grid-cols-12"
           id="experience"
         >
-          <div className="portfolio-card flex flex-col justify-between p-6 md:col-span-4">
+          <div className="portafolio-card flex flex-col justify-between p-6 md:col-span-4">
             <div>
               <h3 className="mb-6 text-[24px] leading-8 font-semibold text-[var(--foreground)]">
                 Qué aporto
@@ -245,7 +245,7 @@ export default function Home() {
               Experiencia profesional
             </h3>
             {experiences.map((item) => (
-              <article key={item.role} className="portfolio-card p-4">
+              <article key={item.role} className="portafolio-card p-4">
                 <div className="mb-2 flex items-start justify-between gap-4">
                   <h4 className="text-[18px] leading-7 font-bold text-[var(--foreground)]">
                     {item.role}
@@ -288,7 +288,7 @@ export default function Home() {
                 const Icon = item.icon;
 
                 return (
-                  <article key={item.title} className="portfolio-card p-4">
+                  <article key={item.title} className="portafolio-card p-4">
                     <Icon
                       className="mb-3 size-5 text-[var(--subtle-foreground)]"
                       aria-hidden="true"
@@ -345,7 +345,7 @@ export default function Home() {
             {faqItems.map((item) => (
               <details
                 key={item.question}
-                className="portfolio-card group cursor-pointer p-4"
+                className="portafolio-card group cursor-pointer p-4"
               >
                 <summary className="text-[16px] leading-6 font-semibold text-[var(--foreground)]">
                   {item.question}

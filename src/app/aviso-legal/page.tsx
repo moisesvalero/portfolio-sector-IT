@@ -35,8 +35,8 @@ export default function AvisoLegalPage() {
           Finalidad
         </h2>
         <p>
-          Este sitio web tiene como finalidad mostrar el portfolio profesional y
-          los servicios de soporte IT de Moisés Valero Sánchez, así como
+          Este sitio web tiene como finalidad mostrar el portafolio profesional
+          y los servicios de soporte IT de Moisés Valero Sánchez, así como
           facilitar el contacto con posibles clientes o empleadores.
         </p>
 

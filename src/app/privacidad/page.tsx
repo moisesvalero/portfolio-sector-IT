@@ -54,7 +54,7 @@ export default function PrivacidadPage() {
         <p>
           El tratamiento se basa en el consentimiento del usuario al contactar
           voluntariamente, así como en el interés legítimo de mostrar un
-          portfolio profesional.
+          portafolio profesional.
         </p>
 
         <h2 className="text-[20px] leading-7 font-semibold text-[var(--foreground)]">

@@ -22,7 +22,7 @@ describe("seo helpers", () => {
     );
   });
 
-  it("creates website json-ld for the public portfolio", () => {
+  it("creates website json-ld for the public portafolio", () => {
     expect(createWebsiteJsonLd()).toMatchObject({
       "@type": "WebSite",
       url: "https://soporte.moisesvalero.es",

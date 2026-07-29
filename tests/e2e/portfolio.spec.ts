@@ -1,6 +1,6 @@
 import { expect, test } from "@playwright/test";
 
-test("portfolio renders without horizontal overflow", async ({ page }) => {
+test("portafolio renders without horizontal overflow", async ({ page }) => {
   await page.emulateMedia({ colorScheme: "dark" });
   await page.goto("/");
 
